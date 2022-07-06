@@ -5,16 +5,21 @@ import { useTranslations } from "next-intl";
 import AppHeader from "../components/Header/AppHeader";
 import { GetStaticProps } from "next";
 
-const Custom404 = () => {
+const ComingSoon = () => {
   const t = useTranslations("Others");
   return (
     <>
-      <AppHeader title="Page Not Found - Haru Fashion" />
+      <AppHeader title="Coming Soon!" />
       <div className="flex flex-col h-screen justify-center items-center">
-        <h1 className="text-2xl">{t("page_not_found")}</h1>
+        <h1 className="text-3xl tracking-wider leading-10">
+          {t("coming_soon")}
+        </h1>
+        <h2 className="text-2xl text-gray500 mt-2">
+          {t("page_not_created_msg")}
+        </h2>
         <Image
-          src="/bg-img/404.svg"
-          alt="404 Page Not Found"
+          src="/bg-img/coding.svg"
+          alt="Not created yet"
           width={400}
           height={300}
         />
@@ -38,4 +43,4 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   };
 };
 
-export default Custom404;
+export default ComingSoon;

@@ -7,7 +7,7 @@ module.exports = {
   },
   images: {
     domains: [
-      'localhost',
+      'theverge.co.ke',
       // Your domain(s) here
     ],
     deviceSizes: sizes,
